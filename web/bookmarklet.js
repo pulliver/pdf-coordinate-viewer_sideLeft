@@ -35,10 +35,13 @@ window.addEventListener('load', () => {
                 const rect = textLayer.getBoundingClientRect();
                 const x = event.clientX - rect.left;
                 const y = event.clientY - rect.top;
-                // const ptX = Math.floor((x / rect.width) * US_LETTER_WIDTH_PT);
+                const ptX = Math.floor((x / rect.width) * US_LETTER_WIDTH_PT);
+                const ptY = Math.floor((y / rect.height) * US_LETTER_HEIGHT_PT);
+                
                 // const ptY = Math.floor(US_LETTER_HEIGHT_PT - (y / rect.height) * US_LETTER_HEIGHT_PT);
-                const ptX = ((x / rect.width) * US_LETTER_WIDTH_PT).toFixed(3);
-                const ptY = (US_LETTER_HEIGHT_PT - (y / rect.height) * US_LETTER_HEIGHT_PT).toFixed(3);
+                
+                // const ptX = ((x / rect.width) * US_LETTER_WIDTH_PT).toFixed(3);
+                // const ptY = (US_LETTER_HEIGHT_PT - (y / rect.height) * US_LETTER_HEIGHT_PT).toFixed(3);
                 showCoords(ptX, ptY);
             }
             else {
