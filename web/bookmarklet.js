@@ -1,8 +1,10 @@
 "use strict";
 const COORDS_ID = 'bookmarklet-coords';
 const POINTS_PER_INCH = 72;
-const US_LETTER_WIDTH_PT = 8.5 * POINTS_PER_INCH;
-const US_LETTER_HEIGHT_PT = 11 * POINTS_PER_INCH;
+// const US_LETTER_WIDTH_PT = 8.5 * POINTS_PER_INCH;
+// const US_LETTER_HEIGHT_PT = 11 * POINTS_PER_INCH;
+const US_LETTER_WIDTH_PT = 8.26772 * POINTS_PER_INCH;
+const US_LETTER_HEIGHT_PT = 11.69291 * POINTS_PER_INCH;
 function findTextLayer(el) {
     if (el.classList.contains('textLayer'))
         return el;
