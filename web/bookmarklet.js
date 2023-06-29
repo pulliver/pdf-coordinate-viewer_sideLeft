@@ -38,10 +38,13 @@ window.addEventListener('load', () => {
                 const x = event.clientX - rect.left;
                 const y = event.clientY - rect.top;
                 const ptX = Math.floor((x / rect.width) * US_LETTER_WIDTH_PT);
-                const ptY = Math.floor((y / rect.height) * US_LETTER_HEIGHT_PT);
-                
+                const ptY = Math.floor(US_LETTER_HEIGHT_PT - (y / rect.height) * US_LETTER_HEIGHT_PT);
+                // ^^^^^  Linea per x0; y0 in alto a SX
+
+                // MODIFICA per x0; y0 in basso a SX
                 // const ptY = Math.floor(US_LETTER_HEIGHT_PT - (y / rect.height) * US_LETTER_HEIGHT_PT);
                 
+                // ORIGINALE
                 // const ptX = ((x / rect.width) * US_LETTER_WIDTH_PT).toFixed(3);
                 // const ptY = (US_LETTER_HEIGHT_PT - (y / rect.height) * US_LETTER_HEIGHT_PT).toFixed(3);
                 showCoords(ptX, ptY);
